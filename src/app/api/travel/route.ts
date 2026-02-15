@@ -55,13 +55,16 @@ export async function POST(req: Request) {
           "importance": "Why it's famous",
           "history": "Brief history",
           "best_time": "Best time to visit",
-          "how_to_reach": "How to get there"
+          "how_to_reach": "How to get there",
+          "is_unesco": true // or false if it is a UNESCO World Heritage Site
         }
       ],
       "local_transport": "Details about local public transport options.",
       "smart_tips": "Practical tips for travelers (safety, food, culture, etc.)"
     }
-    Ensure the tone is friendly and practical. Provide at least 4-5 tourist places.`;
+    Ensure the tone is friendly, practical, and informative. 
+    CRITICAL INSTRUCTION: Provide a COMPREHENSIVE list of the top 10 to 15 tourist places. Do not limit yourself to just a few. 
+    For each place, provide a detailed history and clear instructions on how to reach it.`;
 
         const result = await model.generateContent(prompt);
         const response = await result.response;

@@ -4,6 +4,7 @@ export interface TouristPlace {
     history: string;
     best_time: string;
     how_to_reach: string;
+    is_unesco?: boolean;
 }
 
 export interface TravelData {
