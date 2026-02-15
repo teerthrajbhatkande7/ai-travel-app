@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Travel Recommendation App
+
+An intelligent AI-powered local travel guide built with Next.js 14, TypeScript, Tailwind CSS, and Google Gemini.
+
+## Features
+
+- **AI-Powered Recommendations**: Generates personalized travel guides including city overviews, tourist places, and local tips.
+- **Modern UI**: Clean, mobile-first design with smooth animations.
+- **Fast & Secure**: Built with Next.js App Router, Server Actions/API Routes, and secure API key management.
+- **Rate Limiting**: Protects against abuse.
+- **Caching**: Caches results to improve performance and reduce API usage.
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **AI**: Google Gemini (via `@google/generative-ai`)
+- **Icons**: Lucide React
 
 ## Getting Started
 
-First, run the development server:
+1.  **Clone the repository** (if applicable) or navigate to the project directory.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3.  **Set up Environment Variables**:
+    - Rename `.env.example` to `.env.local`
+    - Add your Google Gemini API Key:
+      ```env
+      GEMINI_API_KEY=your_gemini_api_key
+      ```
+      Get your key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5.  **Open the app**:
+    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app`: App Router pages and API routes.
+- `src/components`: Reusable UI components.
+- `src/lib`: Core utilities (AI client, rate limit, validation, cache).
+- `src/types`: TypeScript definitions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is ready for deployment on Vercel.
+1.  Push to GitHub.
+2.  Import to Vercel.
+3.  Add `GEMINI_API_KEY` to Vercel Environment Variables.
+4.  Deploy!
