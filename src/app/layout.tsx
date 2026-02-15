@@ -5,9 +5,13 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'AI Travel Guide | Smart Local Recommendations',
+  title: 'RoamEasy | Your AI Travel Companion',
   description: 'Get AI-powered travel recommendations, tourist places, and smart tips for any city in the world.',
+  icons: {
+    icon: '/favicon.ico', // We don't have a real favicon yet, but this is standard
+  }
 };
+
 
 export default function RootLayout({
   children,

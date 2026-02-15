@@ -6,7 +6,9 @@ import CityInput from '@/components/CityInput';
 import TravelCard from '@/components/TravelCard';
 import SectionWrapper from '@/components/SectionWrapper';
 import LoadingSpinner from '@/components/LoadingSpinner';
+import Logo from '@/components/Logo';
 import { Map, Bus, Lightbulb, AlertCircle, Plane, Sparkles } from 'lucide-react';
+
 
 export default function Home() {
   const [data, setData] = useState<TravelData | null>(null);
@@ -51,15 +53,14 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 space-y-16">
         {/* Hero Section */}
         <div className="text-center space-y-8 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 backdrop-blur-md border border-white/60 shadow-sm text-slate-600 font-medium text-sm animate-in fade-in slide-in-from-top-4 duration-700">
-            <Sparkles className="w-4 h-4 text-amber-500" />
-            <span>AI-Powered Local Insights</span>
+          <div className="flex justify-center mb-6 animate-in fade-in zoom-in duration-1000">
+            <Logo className="scale-150" />
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-slate-900 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            Explore the World <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">
-              Like a Local
+            Explore the World with <br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+              RoamEasy
             </span>
           </h1>
 
