@@ -5,7 +5,7 @@ interface RateLimit {
 
 const rateLimitMap = new Map<string, RateLimit>();
 const WINDOW_MS = 60 * 1000; // 1 minute
-const MAX_REQUESTS = 10;
+const MAX_REQUESTS = 60;
 
 export function checkRateLimit(ip: string): boolean {
     const now = Date.now();

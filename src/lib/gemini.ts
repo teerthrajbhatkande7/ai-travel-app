@@ -6,7 +6,7 @@ const apiKey = process.env.GEMINI_API_KEY;
 const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
 
 export const model = genAI ? genAI.getGenerativeModel({
-    model: "gemini-flash-latest",
+    model: "gemini-flash-lite-latest",
     generationConfig: {
         responseMimeType: "application/json",
     }

@@ -5,6 +5,8 @@ import { TravelData } from '@/types/travel';
 import CityInput from '@/components/CityInput';
 import TravelCard from '@/components/TravelCard';
 import SectionWrapper from '@/components/SectionWrapper';
+import CityEssentials from '@/components/CityEssentials';
+
 import LoadingSpinner from '@/components/LoadingSpinner';
 import Logo from '@/components/Logo';
 import { Map, Bus, Lightbulb, AlertCircle, Plane, Sparkles } from 'lucide-react';
@@ -133,9 +135,15 @@ export default function Home() {
                 </p>
               </SectionWrapper>
             </div>
+
+
+
+            {/* Phase 2: Logistics & Commercial (Hotels, Food, Bikes) */}
+            <CityEssentials data={data} />
           </div>
+
         )}
       </div>
-    </main>
+    </main >
   );
 }
